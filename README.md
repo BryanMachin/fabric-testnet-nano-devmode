@@ -5,8 +5,8 @@ Based on fabric-samples/test-network-nano-bash, but using [devmode](https://hype
 
 # Prereqs
 
-- Follow the Fabric documentation for the [Prereqs](https://hyperledger-fabric.readthedocs.io/en/latest/prereqs.html)
-- Follow the Fabric documentation for [downloading the Fabric samples and binaries](https://hyperledger-fabric.readthedocs.io/en/latest/install.html). You can skip the docker image downloads by using `curl -sSL https://bit.ly/2ysbOFE | bash -s -- -d`
+- Follow the Fabric documentation for the [Prereqs](https://hyperledger-fabric.readthedocs.io/en/release-2.2/prereqs.html)
+- Follow the Fabric documentation for [downloading the Fabric samples and binaries](https://hyperledger-fabric.readthedocs.io/en/release-2.2/install.html). You can skip the docker image downloads by using `curl -sSL https://bit.ly/2ysbOFE | bash -s -- -d`
 
 # Instructions for starting network
 
