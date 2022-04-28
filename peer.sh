@@ -17,7 +17,5 @@ export CORE_LEDGER_SNAPSHOTS_ROOTDIR="${PWD}"/data/peer0.org1.example.com/snapsh
 # export CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=adminpw
 # docker run --publish 5984:5984 --detach -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=adminpw --name worldstate couchdb:3.1.1
 
-binary=peer
-
 # start peer node in development mode
-"${binary}" node start --peer-chaincodedev=true
+peer node start --peer-chaincodedev=true
