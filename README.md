@@ -25,12 +25,12 @@ If you have trouble running bash scripts in your environment, you can just as ea
 
 Note the syntax of running the scripts. The peer admin scripts run with the `source` command in order to source the script files in the respective shells. This is important so that the exported environment variables can be utilized by any subsequent user commands.
 
-The `peer1admin.sh` script sets the peer1 admin environment variables, creates the application channel `mychannel`, updates the channel configuration for the org1 gossip anchor peer, and joins peer1 to `mychannel`.
+The `peeradmin.sh` script sets the peer admin environment variables, creates the application channel `mychannel`, updates the channel configuration for the org1 gossip anchor peer, and joins peer to `mychannel`.
 The remaining peer admin scripts join their respective peers to `mychannel`.
 
 # Instructions for deploying and running the basic asset transfer sample go chaincode
 
-To deploy and invoke the chaincode, utilize the peer1 admin terminal that you have created in the prior steps.
+To deploy and invoke the chaincode, utilize the peer admin terminal that you have created in the prior steps.
 
 ## 1. Build the chaincode
 ```go
