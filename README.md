@@ -34,7 +34,7 @@ To deploy and invoke the chaincode, utilize the peer1 admin terminal that you ha
 
 ## 1. Build the chaincode
 ```go
-// we move to the chaincode directory
+// we move to the chaincode directory (ex: cd chaincodes/chaincode-go/)
 cd chaincode_path/..
 
 // in linux
