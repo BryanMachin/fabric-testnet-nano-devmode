@@ -71,12 +71,16 @@ Invoke the chaincode to create an asset.
 Then query the asset, update it, and query again to see the resulting asset changes on the ledger. Note that you need to wait a bit for invoke transactions to complete.
 
 ```
+// InitLedger: adds a base set of assets to the ledger.
 CORE_PEER_ADDRESS=127.0.0.1:7051 peer chaincode invoke -o 127.0.0.1:7050 -C mychannel -n mycc -c '{"Args":["InitLedger"]}'
 
+// CreateAsset: issues a new asset to the world state with given details.
 CORE_PEER_ADDRESS=127.0.0.1:7051 peer chaincode invoke -o 127.0.0.1:7050 -C mychannel -n mycc -c '{"Args":["CreateAsset", "id1", "verde", "10", "kmilo", "1"]}'
 
+// ReadAsset: returns the asset stored in the world state with given id.
 CORE_PEER_ADDRESS=127.0.0.1:7051 peer chaincode invoke -o 127.0.0.1:7050 -C mychannel -n mycc -c '{"Args":["ReadAsset", "id1"]}'
 
+// UpdateAsset: updates an existing asset in the world state with provided parameters.
 CORE_PEER_ADDRESS=127.0.0.1:7051 peer chaincode invoke -o 127.0.0.1:7050 -C mychannel -n mycc -c '{"Args":["UpdateAsset", "id1", "negro", "10", "kmilo", "1"]}'
 ```
 
