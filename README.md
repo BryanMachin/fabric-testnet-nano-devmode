@@ -19,7 +19,6 @@ If you have trouble running bash scripts in your environment, you can just as ea
 - cd to the `test-network-devmode` directory in each terminal window
 - In the first terminal, run `./generate_artifacts.sh` to generate crypto material (calls cryptogen) and system and application channel genesis block and configuration transactions (calls configtxgen). The artifacts will be created in the `crypto-config` and `channel-artifacts` directories.
 - In the orderer terminal, run `./orderer.sh`
-- In the orderer admin terminal, run `./ordereradmin.sh`
 - In the peer terminal, run `./peer.sh`
 - Note that orderer and peer write their data (including their ledgers) to their own subdirectory under the `data` directory
 - In the peer admin terminal, run `source peeradmin.sh`
