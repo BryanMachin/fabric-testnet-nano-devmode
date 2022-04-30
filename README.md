@@ -44,7 +44,10 @@ go build -o mychaincode
 go build -o mychaincode.exe
 ```
 
-
+```go
+// we copy to the chaincode binary to chaincodes/ folder
+mv chaincodes/chaincode-go/mychaincode chaincodes/
+```
 
 ## 1. Start the chaincode
 
@@ -59,11 +62,6 @@ sh cc_start.sh
 Run the following batch script to approve and commit the chaincode definition to the channel:
 ```
 sh cc_approve_commit.sh
-```
-
-```go
-// we copy to the chaincode binary to chaincodes/ folder
-mv chaincodes/chaincode-go/mychaincode chaincodes/
 ```
 
 The command will return output similar to the following:
