@@ -35,7 +35,7 @@ To deploy and invoke the chaincode, utilize the peer admin terminal that you hav
 ## 1. Build the chaincode
 ```go
 // we move to the chaincode directory (ex: cd chaincodes/chaincode-go/)
-cd chaincode_path/..
+cd chaincodes/chaincode-go
 
 // in linux
 go build -o mychaincode
@@ -43,6 +43,8 @@ go build -o mychaincode
 // in windows	
 go build -o mychaincode.exe
 ```
+
+
 
 ## 1. Start the chaincode
 
@@ -57,6 +59,11 @@ sh cc_start.sh
 Run the following batch script to approve and commit the chaincode definition to the channel:
 ```
 sh cc_approve_commit.sh
+```
+
+```go
+// we copy to the chaincode binary to chaincodes/ folder
+mv chaincodes/chaincode-go/mychaincode chaincodes/
 ```
 
 The command will return output similar to the following:
