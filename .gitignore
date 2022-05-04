@@ -26,6 +26,8 @@ build
 package-lock.json
 external-chaincode/
 
+#chaincodes
+
 # Eclipse
 .classpath
 .settings
