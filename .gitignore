@@ -25,6 +25,7 @@ node_modules/
 build
 package-lock.json
 external-chaincode/
+chaincodes/cc-gettingstarted-go/vendor/
 
 #chaincodes
 
