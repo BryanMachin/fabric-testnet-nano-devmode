@@ -104,7 +104,7 @@ func (sc *SimpleContract) Crear(ctx contractapi.TransactionContextInterface, key
     }
 
     if activoActual != nil {
-        return fmt.Errorf("No se puede crear un par en el world state con la llave %s. Ya existe", key)
+        return fmt.Errorf("No se puede almacenar en el world state. La llave %s ya existe", key)
     }
 
     err = ctx.GetStub().PutState(key, []byte(value))
@@ -131,7 +131,7 @@ func (sc *SimpleContract) Actualizar(ctx contractapi.TransactionContextInterface
     }
 
     if activoActual == nil {
-        return fmt.Errorf("No se puede actualizar un par en el world state con la llave %s. Ya existe", key)
+        return fmt.Errorf("No se puede actualizar el world state. La llave %s ya existe", key)
     }
 
     err = ctx.GetStub().PutState(key, []byte(value))
@@ -156,7 +156,7 @@ func (sc *SimpleContract) Leer(ctx contractapi.TransactionContextInterface, key 
     }
 
     if activoActual == nil {
-        return "", fmt.Errorf("No se puede leer un par en el world state con la llave %s. Ya existe", key)
+	return "", fmt.Errorf("No se puede leer en el world state. La llave %s no existe", key)
     }
 
     return string(activoActual), nil
@@ -189,7 +189,7 @@ func (sc *SimpleContract) Crear(ctx contractapi.TransactionContextInterface, key
     }
 
     if activoActual != nil {
-        return fmt.Errorf("No se puede crear un par en el world state con la llave %s. Ya existe", key)
+        return fmt.Errorf("No se puede crear en el world state. La llave %s ya existe", key)
     }
 
     err = ctx.GetStub().PutState(key, []byte(value))
@@ -210,7 +210,7 @@ func (sc *SimpleContract) Actualizar(ctx contractapi.TransactionContextInterface
     }
 
     if activoActual == nil {
-        return fmt.Errorf("No se puede actualizar un par en el world state con la llave %s. Ya existe", key)
+        return fmt.Errorf("No se puede actualizar el world state. La llave %s ya existe", key)
     }
 
     err = ctx.GetStub().PutState(key, []byte(value))
@@ -231,7 +231,7 @@ func (sc *SimpleContract) Leer(ctx contractapi.TransactionContextInterface, key 
     }
 
     if activoActual == nil {
-        return "", fmt.Errorf("No se puede leer un par en el world state con la llave %s. Ya existe", key)
+        return "", fmt.Errorf("No se puede leer en el world state. La llave %s no existe", key)
     }
 
     return string(activoActual), nil
