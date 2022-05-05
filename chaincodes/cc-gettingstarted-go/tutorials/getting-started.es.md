@@ -310,7 +310,11 @@ Ahora ejecuta el chaincode:
 
 > Nota: debe mantenerse escuchando
 
-Recuerde cargar antes cargar las variables de entornos usando el script `peeradmin.sh`
+Recuerde exportar las variables de entornos antes de operar con el chacinode usando el script `env.sh`
+
+```
+source ./env.sh
+```
 
 sigue los pasos del [readme.md](https://github.com/kmilodenisglez/fabric-testnet-nano-devmode#1-start-the-chaincode) para construir chaincode
 
