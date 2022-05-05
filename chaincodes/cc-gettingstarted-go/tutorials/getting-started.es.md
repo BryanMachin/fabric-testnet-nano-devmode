@@ -4,10 +4,10 @@
 - [Requisitos previos](#Requisitos-previos)
 - [Gestión interna](#Gestión-interna)
 - [Declarando el contrato](#Declarando-el-contrato)
-- [Escribiendo funciones del contrato](#writing-contract-functions)
-- [Usando contratos en un chaincode](#using-contracts-in-chaincode)
-- [Probando el chaincode como desarrollador](#testing-your-chaincode-as-a-developer)
-- [Qué hacer a continuación?](#what-to-do-next)
+- [Escribiendo funciones del contrato](#escribiendo-funciones-del-contrato)
+- [Usando contratos en un chaincode](#usando-contratos-en-un-chaincode)
+- [Probando el chaincode como desarrollador](#probando-el-chaincode-como-desarrollador)
+- [Qué hacer a continuación?](#qué-hacer-a-continuación)
 
 ## Requisitos previos
 Este tutorial asume que tienes:
