@@ -27,9 +27,14 @@ para configurar el módulo go, debes ejecutar:
  
 ```
 go get -u github.com/hyperledger/fabric-contract-api-go
-go mod vendor
 ```
 para obtener la última versión de fabric-contract-api-go para usar en su chaincode.
+
+Recuerde ejecutar `go mod vendor`para construir un directorio denominado `vendor` que va a contener los paquetes necesario para compilar y el comando `go build` para construir el binario del chaincode.
+
+```
+go mod vendor
+```
 
 ## Declarando el contrato
 El contractapi genera un chaincode tomando uno o más "contratos" agrupados en un chaincode en ejecución. Lo primero que haremos aquí es declarar un contrato para usar en nuestro chaincode. Este contrato será simple, manejando la lectura y escritura de strings hacia y desde el world-state.
