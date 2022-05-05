@@ -27,6 +27,7 @@ para configurar el módulo go, debes ejecutar:
  
 ```
 go get -u github.com/hyperledger/fabric-contract-api-go
+go mod vendor
 ```
 para obtener la última versión de fabric-contract-api-go para usar en su chaincode.
 
