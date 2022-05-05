@@ -131,7 +131,7 @@ func (sc *SimpleContract) Actualizar(ctx contractapi.TransactionContextInterface
     }
 
     if activoActual == nil {
-        return fmt.Errorf("No se puede actualizar el world state. La llave %s ya existe", key)
+        return fmt.Errorf("No se puede actualizar el world state. La llave %s no existe", key)
     }
 
     err = ctx.GetStub().PutState(key, []byte(value))
@@ -210,7 +210,7 @@ func (sc *SimpleContract) Actualizar(ctx contractapi.TransactionContextInterface
     }
 
     if activoActual == nil {
-        return fmt.Errorf("No se puede actualizar el world state. La llave %s ya existe", key)
+        return fmt.Errorf("No se puede actualizar el world state. La llave %s no existe", key)
     }
 
     err = ctx.GetStub().PutState(key, []byte(value))
