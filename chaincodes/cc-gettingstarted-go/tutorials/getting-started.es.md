@@ -297,41 +297,40 @@ func main() {
 ```
 
 ## Probando el chaincode como desarrollador
-Antes debe seguir los pasos del [readme.md](https://github.com/kmilodenisglez/fabric-testnet-nano-devmode) para levantar la red de desarrollo
+Antes debe seguir los pasos del [readme.md](https://github.com/kmilodenisglez/fabric-testnet-nano-devmode#instructions-for-starting-network) para levantar la red de desarrollo
 ### Running the chaincode
 
 ```
 cd cc-gettingstarted-go
 ```
 
-sigue los pasos del [readme.md](https://github.com/kmilodenisglez/fabric-testnet-nano-devmode) para construir chaincode
+sigue los pasos del [readme.md](https://github.com/kmilodenisglez/fabric-testnet-nano-devmode#1-build-the-chaincode) para construir chaincode
 
 Ahora ejecuta el chaincode:
 
 > Nota: debe mantenerse escuchando
 
 Recuerde cargar antes cargar las variables de entornos usando el script `peeradmin.sh`
-```
-CORE_CHAINCODE_LOGLEVEL=debug CORE_CHAINCODE_ID_NAME=mycc:1.0 ./chaincodes/cc-gettingstarted-go -peer.address 127.0.0.1:7052
-```
+
+sigue los pasos del [readme.md](https://github.com/kmilodenisglez/fabric-testnet-nano-devmode#1-start-the-chaincode) para construir chaincode
 
 Una vez que se crea una instancia del chaincode, se puede emitir transacciones para llamar a las funciones del contrato dentro del chaincode. Primero use el `invoke` para crear un nuevo par llave-valor en el world-state:
 
 ```
-CORE_PEER_ADDRESS=127.0.0.1:7051 peer chaincode invoke -o 127.0.0.1:7050 -n mycc -c '{"Args":["Crear", "KEY_1", "VALUE_1"]}' -C mychannel
+peer chaincode invoke -o 127.0.0.1:7050 -n mycc -c '{"Args":["Crear", "KEY_1", "VALUE_1"]}' -C mychannel
 ```
 
 El primer argumento de la invocación es la función que desea llamar. Como solo tiene un contrato en su chaincode, simplemente puede pasar el nombre de la función. Los siguientes argumentos conforman los valores que se enviarán a la función. Los argumentos en fabric enviados a un chaincode siempre son string, sin embargo, como se describió anteriormente, una función de contrato puede tomar tipos que no sean string. El chaincode generado por contractapi maneja la conversión de estos valores (aunque en este caso nuestra función toma string); puede obtener más información sobre esto en tutoriales posteriores. Tenga en cuenta que no tiene que especificar el contexto de la transacción a pesar de que la función `Crear` toma uno, este se genera para ti.
 
 Ahora que ha creado su par de llave-valor, puede usar la función Actualizar de su contrato para cambiar el valor. Esto nuevamente se puede hacer emitiendo un comando de invocación en el contenedor CLI:
 ```
-CORE_PEER_ADDRESS=127.0.0.1:7051 peer chaincode invoke -o 127.0.0.1:7050 -c '{"Args":["Actualizar", "KEY_1", "VALUE_2"]}' -n mycc -C mychannel
+peer chaincode invoke -o 127.0.0.1:7050 -c '{"Args":["Actualizar", "KEY_1", "VALUE_2"]}' -n mycc -C mychannel
 ```
 
 Luego puede leer el valor almacenado para una llave emitiendo un comando de consulta contra la función de Leer del contrato:
 
 ```
-CORE_PEER_ADDRESS=127.0.0.1:7051 peer chaincode query -o 127.0.0.1:7050 -c '{"Args":["Leer", "KEY_1"]}' -n mycc -C mychannel
+peer chaincode query -o 127.0.0.1:7050 -c '{"Args":["Leer", "KEY_1"]}' -n mycc -C mychannel
 ```
 
 Debería retornar el valor "VALUE_2".
