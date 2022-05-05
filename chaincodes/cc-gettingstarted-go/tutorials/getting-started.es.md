@@ -6,8 +6,8 @@
 - [Declarando el contrato](#Declarando-el-contrato)
 - [Escribiendo funciones del contrato](#escribiendo-funciones-del-contrato)
 - [Usando contratos en un chaincode](#usando-contratos-en-un-chaincode)
-- [Probando el chaincode como desarrollador](#probando-el-chaincode-como-desarrollador)
-- [Qué hacer a continuación?](#Qué-hacer-a-continuación)
+- [Probando el chaincode como desarrollador](#Probando-el-chaincode-como-desarrollador)
+- [Qué hacer a continuación?](#Qué-hacer-a-continuación?)
 
 ## Requisitos previos
 Este tutorial asume que tienes:
