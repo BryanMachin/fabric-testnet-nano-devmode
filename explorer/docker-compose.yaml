@@ -5,10 +5,6 @@ volumes:
   pgdata:
   walletstore:
 
-# networks:
-#   example.com:
-#     name: net_test
-
 services:
 
   explorerdb.example.com:
@@ -26,8 +22,6 @@ services:
       retries: 5
     volumes:
       - pgdata:/var/lib/postgresql/data
-    extra_hosts:
-      - "localhost:192.168.49.133"
     network_mode: host
 
   explorer.example.com:
@@ -52,11 +46,7 @@ services:
       - ./connection-profile:/opt/explorer/app/platform/fabric/connection-profile
       - /home/portainer/fabric-samples/fabric-testnet-nano-devmode/crypto-config/msp:/msp
       - walletstore:/opt/explorer/wallet
-      # ports:
-      # - 8080:8080
     depends_on:
       explorerdb.example.com:
         condition: service_healthy
-    extra_hosts:
-      - "localhost:192.168.49.133"
     network_mode: host
