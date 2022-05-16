@@ -40,7 +40,7 @@ Organizations:
         # Policies defines the set of policies at this level of the config tree
         # For organization policies, their canonical path is usually
         #   /Channel/<Application|Orderer>/<OrgName>/<PolicyName>
-        Policies: &SampleOrgPolicies
+        Policies: &Org1Policies
             Readers:
                 Type: Signature
                 Rule: "OR('Org1MSP.member')"
@@ -504,7 +504,7 @@ Profiles:
             Organizations:
                 - <<: *Org1
                   Policies:
-                      <<: *SampleOrgPolicies
+                      <<: *Org1Policies
                       Admins:
                           Type: Signature
                           Rule: "OR('Org1MSP.member')"
@@ -513,7 +513,7 @@ Profiles:
             Organizations:
                 - <<: *Org1
                   Policies:
-                      <<: *SampleOrgPolicies
+                      <<: *Org1Policies
                       Admins:
                           Type: Signature
                           Rule: "OR('Org1MSP.member')"
@@ -522,7 +522,7 @@ Profiles:
                 Organizations:
                     - <<: *Org1
                       Policies:
-                          <<: *SampleOrgPolicies
+                          <<: *Org1Policies
                           Admins:
                               Type: Signature
                               Rule: "OR('Org1MSP.member')"
@@ -537,7 +537,7 @@ Profiles:
             Organizations:
                 - <<: *Org1
                   Policies:
-                      <<: *SampleOrgPolicies
+                      <<: *Org1Policies
                       Admins:
                           Type: Signature
                           Rule: "OR('Org1MSP.member')"
@@ -546,7 +546,7 @@ Profiles:
             Organizations:
                 - <<: *Org1
                   Policies:
-                      <<: *SampleOrgPolicies
+                      <<: *Org1Policies
                       Admins:
                           Type: Signature
                           Rule: "OR('Org1MSP.member')"
@@ -555,7 +555,7 @@ Profiles:
                 Organizations:
                     - <<: *Org1
                       Policies:
-                          <<: *SampleOrgPolicies
+                          <<: *Org1Policies
                           Admins:
                               Type: Signature
                               Rule: "OR('Org1MSP.member')"
@@ -583,7 +583,7 @@ Profiles:
             Organizations:
                 - <<: *Org1
                   Policies:
-                      <<: *SampleOrgPolicies
+                      <<: *Org1Policies
                       Admins:
                           Type: Signature
                           Rule: "OR('Org1MSP.member')"
@@ -592,7 +592,7 @@ Profiles:
             Organizations:
                 - <<: *Org1
                   Policies:
-                      <<: *SampleOrgPolicies
+                      <<: *Org1Policies
                       Admins:
                           Type: Signature
                           Rule: "OR('Org1MSP.member')"
@@ -601,7 +601,7 @@ Profiles:
                 Organizations:
                     - <<: *Org1
                       Policies:
-                          <<: *SampleOrgPolicies
+                          <<: *Org1Policies
                           Admins:
                               Type: Signature
                               Rule: "OR('Org1MSP.member')"
@@ -625,7 +625,7 @@ Profiles:
             Organizations:
                 - <<: *Org1
                   Policies:
-                      <<: *SampleOrgPolicies
+                      <<: *Org1Policies
                       Admins:
                           Type: Signature
                           Rule: "OR('Org1MSP.member')"
@@ -634,7 +634,7 @@ Profiles:
             Organizations:
                 - <<: *Org1
                   Policies:
-                      <<: *SampleOrgPolicies
+                      <<: *Org1Policies
                       Admins:
                           Type: Signature
                           Rule: "OR('Org1MSP.member')"
