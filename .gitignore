@@ -2,7 +2,6 @@ channel-artifacts/
 data/
 *.gz
 
-
 # Emacs backup files
 *~
 *#
