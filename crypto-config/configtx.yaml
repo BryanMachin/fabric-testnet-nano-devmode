@@ -226,11 +226,11 @@ Application: &ApplicationDefaults
     #   /Channel/Application/<PolicyName>
     Policies: &ApplicationDefaultPolicies
         LifecycleEndorsement:
-            Type: ImplicitMeta
-            Rule: "MAJORITY Endorsement"
+            Type: Signature
+            Rule: "OR('Org1MSP.peer','Org2MSP.peer')"
         Endorsement:
-            Type: ImplicitMeta
-            Rule: "MAJORITY Endorsement"
+            Type: Signature
+            Rule: "OR('Org1MSP.peer','Org2MSP.peer')"
         Readers:
             Type: ImplicitMeta
             Rule: "ANY Readers"
