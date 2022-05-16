@@ -5,6 +5,7 @@ set -eu
 . ./env.sh
 
 export FABRIC_LOGGING_SPEC=chaincode=debug
+export CORE_PEER_LOCALMSPID=Org1MSP
 export CORE_PEER_ID=peer0.org1.example.com
 export CORE_PEER_LISTENADDRESS=0.0.0.0:7051
 export CORE_PEER_CHAINCODEADDRESS=127.0.0.1:7052

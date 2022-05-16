@@ -8,7 +8,7 @@
 			"password": "N@rut0"
 		},
 		"enableAuthentication": false,
-		"organization": "SampleOrg",
+		"organization": "Org1MSP",
 		"connection": {
 			"timeout": {
 				"peer": {
@@ -26,8 +26,8 @@
 		}
 	},
 	"organizations": {
-		"SampleOrg": {
-			"mspid": "SampleOrg",
+		"Org1MSP": {
+			"mspid": "Org1MSP",
 			"adminPrivateKey": {
 				"path": "/msp/keystore/key.pem"
 			},

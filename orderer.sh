@@ -14,7 +14,8 @@ fi
 export FABRIC_LOGGING_SPEC=debug:cauthdsl,policies,msp,common.configtx,common.channelconfig=info
 export ORDERER_GENERAL_TLS_ENABLED=false
 export ORDERER_FILELEDGER_LOCATION="${PWD}"/data/orderer
-export ORDERER_GENERAL_LOCALMSPDIR="${PWD}"/crypto-config/msp
+# we are using the same msp as the peer, this should not be used in a production environment
+export ORDERER_GENERAL_LOCALMSPDIR="${PWD}"/crypto-config/organizations/org1.example.com/peers/peer0.org1.example.com/msp
 # used in metrics
 export ORDERER_METRICS_PROVIDER=prometheus
 export ORDERER_OPERATIONS_LISTENADDRESS=0.0.0.0:9443
