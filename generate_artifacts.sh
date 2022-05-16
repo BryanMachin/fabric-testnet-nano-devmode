@@ -10,7 +10,7 @@ rm -r "${PWD}"/data || true
 export PATH="${PWD}"/../../fabric/build/bin:"${PWD}"/../bin:"$PATH"
 
 # set FABRIC_CFG_PATH to configtx.yaml directory that contains the profiles
-export FABRIC_CFG_PATH="${PWD}"
+export FABRIC_CFG_PATH="${PWD}/crypto-config"
 
 echo "Generating orderer genesis block"
 configtxgen -profile SampleDevModeSolo -channelID syschannel -outputBlock channel-artifacts/genesis.block
