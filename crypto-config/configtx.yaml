@@ -35,7 +35,7 @@ Organizations:
         ID: Org1MSP
 
         # MSPDir is the filesystem path which contains the MSP configuration.
-        MSPDir: peerOrganizations/org1.example.com/msp
+        MSPDir: organizations/org1.example.com/msp
 
         # Policies defines the set of policies at this level of the config tree
         # For organization policies, their canonical path is usually
