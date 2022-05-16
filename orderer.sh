@@ -12,6 +12,8 @@ if [ ! -f "${ORDERER_GENERAL_BOOTSTRAPFILE}" ]; then
 fi
 
 export FABRIC_LOGGING_SPEC=debug:cauthdsl,policies,msp,common.configtx,common.channelconfig=info
+export ORDERER_GENERAL_LISTENPORT=7050
+export CORE_PEER_LOCALMSPID=Org1MSP
 export ORDERER_GENERAL_TLS_ENABLED=false
 export ORDERER_FILELEDGER_LOCATION="${PWD}"/data/orderer
 # we are using the same msp as the peer, this should not be used in a production environment
