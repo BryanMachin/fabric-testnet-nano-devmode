@@ -51,7 +51,13 @@ go build -o mychaincode.exe
 mv chaincodes/chaincode-go/mychaincode chaincodes/
 ```
 
-## 1. Start the chaincode
+## 1.1 Start the chaincode for DAPP
+ Si piensan usar la app dapp (fabric-sdk) entonces debemos instalar el chaincode en el peer, para eso sigan los pasos siguientes:
+- [Chaincode + DAPP](./dapp/README.md)
+
+## 1.2 Start the chaincode in dev mode
+
+
 
 Run the following batch script to start the chaincode and connect it to the peer:
 
