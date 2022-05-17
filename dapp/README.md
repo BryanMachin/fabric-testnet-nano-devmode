@@ -1,5 +1,22 @@
 # Instrucciones para implementar y ejecutar el chaincode "chaincode-go" para usar con la DAPP
+
 Para usar la dapp debemos instalar el chaincode en el peer, en vez de ejecutarlo como lo hacemos en el Tema II
+
+## requisitos previos
+
+### Pull ccenv
+
+```bash
+$ docker pull hyperledger/fabric-ccenv:2.2.5
+$ docker tag hyperledger/fabric-ccenv:2.2.5 hyperledger/fabric-ccenv:2.2
+```
+
+### Pull baseos
+
+```bash
+$ docker pull hyperledger/fabric-baseos:2.2.5
+$ docker tag hyperledger/fabric-baseos:2.2.5 hyperledger/fabric-baseos:2.2
+```
 
 ```
 source peeradmin.sh
