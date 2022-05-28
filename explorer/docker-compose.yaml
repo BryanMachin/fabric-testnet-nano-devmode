@@ -9,7 +9,7 @@ services:
 
   explorerdb.example.com:
     image: hyperledger/explorer-db:latest
-    container_name: explorerdb.example.com
+    container_name: explorer.example.com
     hostname: explorerdb.example.com
     environment:
       - DATABASE_DATABASE=fabricexplorer
@@ -44,7 +44,7 @@ services:
     volumes:
       - ./config.json:/opt/explorer/app/platform/fabric/config.json
       - ./connection-profile:/opt/explorer/app/platform/fabric/connection-profile
-      - /home/portainer/fabric-samples/fabric-testnet-nano-devmode/crypto-config/msp:/msp
+      - ../crypto-config/msp:/msp
       - walletstore:/opt/explorer/wallet
     depends_on:
       explorerdb.example.com:
